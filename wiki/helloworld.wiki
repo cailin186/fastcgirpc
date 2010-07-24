@@ -2,25 +2,16 @@
 
 = 编写服务 =
 
-进入 services 目录，创建HelloWorldServices.php，将以下代码复制到文件中：
+进入 fastRPC/services 目录，创建 helloServices.php ，将以下代码复制到文件中：
 
 {{{
 <?php
-class HelloWorldServices extends fastRPCServices
+class helloServices extends fastRPCServices
 {
-  function sayhello()
+  function sayHandle()
   {
     return 'Hello World!';
   }
 }
 ?>
 }}}
-
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
