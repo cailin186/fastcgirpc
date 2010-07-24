@@ -1,0 +1,23 @@
+fastRPC 5分钟快速入门.
+
+= 引言 =
+
+通过这里的介绍，可以帮助你快速了解如何安装部署fastRPC，如果开发出一个HelloWorld!案例。
+如有错误欢迎来信指正。
+
+= 安装 =
+
+== 下载 ==
+
+您可以通过SVN方式从我们的源代码仓库中获得，它是一个PHP版本的源代码。
+
+== 环境需求 ==
+
+PHP版本要求在5.0以上，并且安装带 socket 扩展支持
+
+= 我的HelloWorld =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
