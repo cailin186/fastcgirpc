@@ -33,4 +33,6 @@ private $rpcRoot = "/opt/wwwroot/rpcserver.php"; # 改为你所指定的目录
 
 == 运行 ==
 
-php test/test.php
+{{{
+> php test/test.php
+}}}
