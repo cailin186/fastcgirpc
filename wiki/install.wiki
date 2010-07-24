@@ -13,9 +13,9 @@
 
 == 配置 ==
 
- # 进入到fastRPC源代码目录
+ * 进入到fastRPC源代码目录
 
- # 使用文本编辑器，编辑/rpcserver.php：
+ * 使用文本编辑器，编辑/rpcserver.php：
 
 {{{
 <?php
@@ -24,7 +24,7 @@ $rpccfg['services'] = '/docroot/services-source-path/' # 改为你所指定的�
 ?>
 }}}
 
- # 编辑fastRPC/fastRPC.php：
+ * 编辑fastRPC/fastRPC.php：
 
 {{{
 <?php
