@@ -2,4 +2,4 @@
 
  * [install 安装]
 
- * [hellworld HelloWorld]
+ * [helloworld HelloWorld]
