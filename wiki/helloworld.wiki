@@ -38,7 +38,7 @@ var_dump($ret);
 > php fastRPC/test/testhello.php
 }}}
 
-成功运行将输出：
+输出结果：
 
 {{{
 string(49) "{"state":"200 success","entity":"HelloWorld!"}"
