@@ -76,14 +76,12 @@ class fastRPCDispatch
 			return false;
 		}
 
-		ob_clean();
 		$ret = call_user_method_array($handle . 'Handle', &$obj, array($params));
-		$ob_contents = ob_get_contents();
 		ob_clean();
 		if($ret) {
-			echo json_encode(array('state' => '200 success', 'entity' => $ob_contents));
+			echo json_encode(array('state' => '200 success', 'entity' => &$ret));
 		}else{
-			echo json_encode(array('state' => '300 failed', 'error' => $ob_contents));
+			echo json_encode(array('state' => '300 failed', 'error' => $obj->getError()));
 		}
 	}
 
