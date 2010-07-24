@@ -2,7 +2,19 @@
 
 = 编写服务 =
 
-进入 services 目录，创建 helloworldServices.php，请注意大小写。
+进入 services 目录，创建 HelloWorldServices.php，将以下代码复制到文件中：
+
+{{{
+<?php
+class HelloWorldServices extends fastRPCServices
+{
+  function sayhello()
+  {
+    return 'Hello World!';
+  }
+}
+?>
+}}}
 
 
 
