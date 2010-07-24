@@ -13,7 +13,12 @@ fastRPC 5分钟快速入门.
 
 == 环境需求 ==
 
-PHP版本要求在5.0以上，并且安装带 socket 扩展支持
+ * [http://php.net PHP5.0]以上版本，带socket扩展
+ * [http://php-fpm.org/ PHP-FPM]
+
+== 安装 ==
+
+将下载的源代码之间复制到您的 wwwroot 目录中
 
 = 我的HelloWorld =
 
