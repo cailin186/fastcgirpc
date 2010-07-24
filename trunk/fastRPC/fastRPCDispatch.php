@@ -37,11 +37,19 @@ class fastRPCDispatch
 		}
 
 		list($services, $handle) = explode('.', $method);
-		if(empty($services))
+		if(empty($services)) {
+			trigger_error('must spesifai services', E_USER_ERROR);
 			return false;
+		}
 
 		if(empty($handle))
 			$handle = 'index';
+		else {
+			if($handle[0] == '_') {
+				trigger_error('invalid request [handle=' . $handle . ']', E_USER_ERROR);
+				return false;			
+			}
+		}
 		
 		foreach($_SERVER as $key => $value) {
 			if(0 == strncmp($key, 'FRPC_ARGS_', 10)) {
@@ -52,7 +60,7 @@ class fastRPCDispatch
 		$class = $services . 'Services';
 		$file = $this->rpccfg['services'] . '/' . $class . '.php';
 		if(!file_exists($file)) {
-			trigger_error('invaild services [' . $services . ']', E_USER_ERROR);
+			trigger_error('invalid services [' . $services . ']', E_USER_ERROR);
 			return false;
 		}
 
@@ -72,16 +80,16 @@ class fastRPCDispatch
 
 		if(!method_exists($obj, $handle . 'Handle'))
 		{
-			trigger_error('handle [' . $handle . '] not found', E_USER_ERROR);
+			trigger_error('[handle=' . $handle . '] not found', E_USER_ERROR);
 			return false;
 		}
 
 		$ret = call_user_method_array($handle . 'Handle', &$obj, array($params));
 		ob_clean();
-		if($ret) {
-			echo json_encode(array('state' => '200 success', 'entity' => &$ret));
-		}else{
+		if(false == $ret) {
 			echo json_encode(array('state' => '300 failed', 'error' => $obj->getError()));
+		}else{
+			echo json_encode(array('state' => '200 success', 'entity' => $ret));
 		}
 	}
 
@@ -90,7 +98,7 @@ class fastRPCDispatch
 function frpc_error_handle($errno, $errstr, $errfile, $errline)
 {
 	ob_clean();
-	echo json_encode(array('state' => '500 failed', 'error' => 'file=' . $errfile . ', line=' . $errline . ', error=' . $errstr));
+	echo json_encode(array('state' => '500 failed', 'error' => $errstr . ', file=' . $errfile . ', line=' . $errline));
 	ob_end_flush();
 
 	exit;

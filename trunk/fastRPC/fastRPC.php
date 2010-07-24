@@ -33,7 +33,7 @@ class fastRPC
 	private $requestID = 1;
 	private $rpcRoot = "/opt/wwwroot/rpcserver.php";
 	private $sock = null;
-	private $call_timeout = 0.1;	//second
+	private $call_timeout = FRPC_CALL_TIMEOUT;	//second
 	private $socket_rw_timeout = 10000;	//usecond
 
 	function __construct($host = null, $port = null) {
@@ -133,9 +133,14 @@ class fastRPC
 			}
 		}
 
+		if(false === $tmp) {
+			trigger_error(socket_strerror(socket_last_error()) . '(socket timeout)', E_USER_WARNING);
+			return false;
+		}
+
 		$pos = strpos($content, "\r\n\r\n");
 		if(false === $pos) {
-			trigger_error('invalid prototal', E_USER_ERROR);
+			trigger_error('invalid prototal', E_USER_WARNING);
 			return false;
 		}
 		$pos += 4;

@@ -1,6 +1,6 @@
 <?php
 $rpccfg['services'] = '/opt/wwwroot/services';
-//$rpccfg['display_error'] = true;
+$rpccfg['display_error'] = true;
 
 require("fastRPC/fastRPCDispatch.php");
 
