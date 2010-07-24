@@ -2,7 +2,7 @@
 
 = 编写服务 =
 
-进入 services 目录，创建 HelloWorldServices.php，将以下代码复制到文件中：
+进入 services 目录，创建HelloWorldServices.php，将以下代码复制到文件中：
 
 {{{
 <?php
