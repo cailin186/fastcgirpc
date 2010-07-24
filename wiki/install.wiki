@@ -10,3 +10,13 @@
 == 安装 ==
 
 将下载的源代码复制到您的 wwwroot 目录中
+
+== 配置 ==
+
+使用文本编辑器，打开rpcserver.php源代码，指定services源代码目录：
+
+{{{
+<?php
+$rpccfg['services'] = '/opt/wwwroot/services-source-path/'
+?>
+}}}
