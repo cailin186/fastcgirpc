@@ -1,1 +1,1 @@
- * [GettingStart 快速入门]
+ * [install 安装]
