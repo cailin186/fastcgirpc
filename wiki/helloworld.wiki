@@ -2,7 +2,7 @@
 
 = 创建服务程序 =
 
-进入 fastRPC/services 目录，创建 helloServices.php ，将以下代码复制到文件中：
+进入 services 目录，创建 helloServices.php ，将以下代码复制到文件中：
 
 {{{
 <?php
