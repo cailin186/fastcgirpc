@@ -18,7 +18,7 @@ class helloServices extends fastRPCServices
 
 = 创建测试程序 =
 
-进入 fastRPC/test 目录，创建 testhello.php ，将以下代码复制到文件中：
+进入 test 目录，创建 testhello.php ，将以下代码复制到文件中：
 
 {{{
 <?php
