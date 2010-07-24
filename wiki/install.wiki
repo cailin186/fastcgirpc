@@ -17,6 +17,6 @@
 
 {{{
 <?php
-$rpccfg['services'] = '/opt/wwwroot/services-source-path/'
+$rpccfg['services'] = '/docroot/services-source-path/'
 ?>
 }}}
