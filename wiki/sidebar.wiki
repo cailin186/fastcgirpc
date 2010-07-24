@@ -1,2 +1,2 @@
- * [introduce 介绍]
+ * [introduction 介绍]
  * [install 安装]
