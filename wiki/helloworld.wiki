@@ -1,8 +1,9 @@
 快速编写一个Hello World服务
 
-= Introduction =
+= 编写服务 =
 
-Add your content here.
+进入 services 目录，创建 helloworldServices.php，请注意大小写。
+
 
 
 = Details =
