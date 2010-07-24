@@ -4,8 +4,8 @@
 
 == 环境需求 ==
 
- * [http://php.net PHP5.0]以上版本，带socket扩展
- * [http://php-fpm.org/ PHP-FPM]
+ * [http://php.net PHP5.0]以上版本(带socket扩展)
+ * [http://php-fpm.org/ PHP-FPM](端口为9000)
 
 == 安装 ==
 
