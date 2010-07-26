@@ -1,5 +1,5 @@
 <?php
-class fooServices extends fastRPCServices
+class FooServices extends FastRPCServices
 {
 	function test1Handle($args)
 	{

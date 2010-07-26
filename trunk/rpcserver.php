@@ -1,8 +1,8 @@
 <?php
-$rpccfg['services'] = '/opt/wwwroot/services';
+$rpccfg['services'] = '/opt/app/rpcserver/services';
 $rpccfg['display_error'] = true;
 
-require("fastRPC/fastRPCDispatch.php");
+require("fastrpc/FastRPCDispatch.php");
 
-$server = new fastRPCDispatch();
+$server = new FastRPCDispatch();
 $server->run();
