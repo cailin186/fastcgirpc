@@ -1,6 +1,6 @@
 快速编写一个Hello World服务
 
-= 创建服务程序 =
+== 创建服务程序 ==
 
 进入 services 目录，创建 helloServices.php ，将以下代码复制到文件中：
 
@@ -16,7 +16,7 @@ class helloServices extends fastRPCServices
 ?>
 }}}
 
-= 创建测试程序 =
+== 创建测试程序 ==
 
 进入 test 目录，创建 hello.php ，将以下代码复制到文件中：
 
