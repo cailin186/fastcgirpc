@@ -21,5 +21,3 @@ fastRPC是基于FastCGI通讯协议的RPC框架，它适用多人合作开发的
   fastRPC采用fast CGI协议为通信协议，服务器端采用Fast Process Manager作为服务运行容器，这样的好处在于，只要会编写FastCGI程序的工程师都快速学会开发fastRPC服务，例如PHP工程师，他们可以充分挖掘PHP简单、高效的特点，基于fastRPC框架快速完成服务逻辑的开发。
 
 当前这个版本采用PHP实现了一个原型，敢兴趣的朋友可以基于这个思路，拓展出其他语言的框架实现。
-
-[http://photo.staticsdo.com/a1/402/181/395/719-1115596664-8_765.jpg]
