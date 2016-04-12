@@ -1,0 +1,3 @@
+fastRPC是基于FastCGI通讯协议的RPC框架，它适用多人合作开发的高并发网站项目。
+
+通过这个RPC框架，可以将MVC思想中的Model后置于RPC Server层转型为服务，以协议方式暴露Model的方法给前端的View、Control操作。
